@@ -1,0 +1,22 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Backups
+*.bak
+*~
+
+# Node (cuando empaquetemos)
+node_modules/
+package-lock.json
+
+# Builds
+dist/
+build/
