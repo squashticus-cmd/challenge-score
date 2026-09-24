@@ -1,0 +1,66 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg-primary:   #0a0e27;
+  --bg-secondary: #131829;
+  --bg-card:      #1c2238;
+  --accent:       #00d4ff;
+  --accent-warm:  #ff6b35;
+  --text-primary: #ffffff;
+  --text-muted:   #8892b0;
+  --success:      #00e676;
+  --danger:       #ff5252;
+  --border:       #2a3350;
+
+  --fs-sm: clamp(0.8rem, 1.5vw, 0.95rem);
+  --fs-md: clamp(1rem, 2vw, 1.25rem);
+  --fs-lg: clamp(1.5rem, 4vw, 2.5rem);
+  --fs-score: clamp(3rem, 12vw, 8rem);
+
+  --sp-xs: 0.25rem;
+  --sp-sm: 0.5rem;
+  --sp-md: 1rem;
+  --sp-lg: 1.5rem;
+  --sp-xl: 2rem;
+
+  --radius: 12px;
+  --radius-lg: 20px;
+
+  /* ============ COLORES POR DEPORTE ============ */
+--sport-tennis:     #7fb069;   /* verde (cancha de pasto) */
+--sport-squash:     #4a7ba7;   /* azul (cancha) */
+--sport-padel:      #9b5de5;   /* morado (escudo) */
+--sport-badminton:  #6ec1e4;   /* celeste (volante) */
+--sport-pickleball: #d4a04c;   /* dorado (pelota) */
+--sport-raquetbol:  #e6b422;   /* amarillo (bola) */
+--sport-fronton:    #e76f51;   /* naranja (pelota) */
+--sport-tenis-mesa:  #d62828;   /* rojo (paleta) */
+}
+
+html, body { height: 100%; overflow: hidden; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  overscroll-behavior: none;
+}
+
+#app { height: 100vh; height: 100dvh; position: relative; }
+
+.view {
+  position: absolute;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+           env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.view.active { display: flex; }
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }

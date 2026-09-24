@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0e27">
+  <meta name="theme-color" content="#0a0e27">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Challenge Score">
+  <meta name="author" content="Squashner">
+  <meta name="description" content="Marcador de puntuación para 8 deportes de raqueta. 100% offline.">
+  <title>Challenge Score</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <link rel="icon" href="data:,">
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- ============ HOME ============ -->
+     <section id="view-home" class="view active">
+		<header class="app-header">
+		 <img src="assets/images/logo.png" alt="Challenge Score" class="app-logo">
+	</header>
+    <div class="sport-grid" id="sport-grid"></div>
+    <footer class="app-footer">
+      <button class="btn-ghost" id="btn-history">📋 Historial</button>
+      <small class="version">v0.6.0</small>
+	</footer>
+</section>
+
+    <!-- ============ MATCH ============ -->
+    <section id="view-match" class="view">
+      <header class="match-header">
+        <button class="btn-icon" id="btn-back">←</button>
+        <span id="match-sport-name">—</span>
+        <button class="btn-icon" id="btn-menu">⋮</button>
+      </header>
+
+      <div class="scoreboard" id="scoreboard"></div>
+      <div class="controls" id="controls"></div>
+    </section>
+
+    <!-- ============ HISTORY ============ -->
+    <section id="view-history" class="view">
+      <header class="match-header">
+        <button class="btn-icon" id="btn-back-history">←</button>
+        <span>Historial</span>
+        <button class="btn-icon" id="btn-clear-history">🗑</button>
+      </header>
+      <div id="history-list" class="history-list"></div>
+    </section>
+
+  </div>
+
+  <!-- ============ MODAL: NUEVO PARTIDO ============ -->
+  <div class="modal-overlay" id="modal-new">
+    <div class="modal">
+      <h2 id="modal-sport-title">Nuevo partido</h2>
+      <form id="form-new-match">
+        <label>
+          Jugador 1
+          <input type="text" id="input-player1" placeholder="Jugador 1" maxlength="20" autocomplete="off">
+        </label>
+        <label>
+          Jugador 2
+          <input type="text" id="input-player2" placeholder="Jugador 2" maxlength="20" autocomplete="off">
+        </label>
+
+        <details class="advanced">
+          <summary>Opciones avanzadas</summary>
+          <label>
+            Mejor de
+            <select id="select-sets">
+              <option value="1">1 set</option>
+              <option value="3" selected>3 sets</option>
+              <option value="5">5 sets</option>
+            </select>
+          </label>
+        </details>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-ghost" id="btn-cancel-new">Cancelar</button>
+          <button type="submit" class="btn-primary">Comenzar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ MODAL: FIN DE PARTIDO ============ -->
+  <div class="modal-overlay" id="modal-end">
+    <div class="modal">
+      <div class="trophy">🏆</div>
+      <h2 id="modal-winner-name">—</h2>
+      <p class="modal-subtitle">¡Ganador del partido!</p>
+
+      <div class="final-score" id="modal-final-score"></div>
+
+      <div class="modal-actions-vertical">
+        <button class="btn-share whatsapp" id="btn-share-whatsapp">
+          📱 Compartir por WhatsApp
+        </button>
+        <button class="btn-share" id="btn-share-native">
+          📤 Compartir / Enviar
+        </button>
+        <button class="btn-share" id="btn-print">
+          🖨️ Imprimir
+        </button>
+        <button class="btn-ghost full" id="btn-close-end">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ ÁREA IMPRIMIBLE (oculta) ============ -->
+  <div id="print-area" class="print-only"></div>
+  <script src="js/storage.js"></script>
+  <script src="js/sports/base.js"></script>
+  <script src="js/sports/tennis.js"></script>
+  <script src="js/sports/squash.js"></script>
+  <script src="js/sports/padel.js"></script>
+  <script src="js/sports/badminton.js"></script>
+  <script src="js/sports/pickleball.js"></script>
+  <script src="js/sports/raquetbol.js"></script>
+  <script src="js/sports/fronton.js"></script>
+  <script src="js/sports/tenis-mesa.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/share.js"></script>
+  <script src="js/app.js"></script>
+  
+ 
+</body>
+</html>

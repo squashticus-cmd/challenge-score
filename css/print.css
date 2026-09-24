@@ -1,0 +1,38 @@
+.print-only { display: none; }
+
+@media print {
+  body * { visibility: hidden; }
+  #print-area, #print-area * { visibility: visible; }
+  #print-area {
+    display: block;
+    position: absolute;
+    inset: 0;
+    padding: 2cm;
+    color: #000;
+    background: #fff;
+    font-family: Georgia, serif;
+  }
+
+  .print-header { text-align: center; border-bottom: 2px solid #000; padding-bottom: 1rem; margin-bottom: 2rem; }
+  .print-header h1 { font-size: 2rem; margin: 0; }
+  .print-header p { color: #555; }
+
+  .print-body h2 { font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center; }
+
+  .print-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+  .print-body th, .print-body td {
+    border: 1px solid #333;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .print-body th { background: #eee; }
+  .print-body td:first-child { text-align: left; font-weight: 700; }
+
+  .print-date { text-align: right; font-size: 0.85rem; color: #555; }
+  .print-footer { text-align: center; font-size: 0.75rem; color: #888; margin-top: 2rem; }
+}

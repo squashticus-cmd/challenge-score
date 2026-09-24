@@ -1,0 +1,15 @@
+{
+  "name": "Challenge Score",
+  "short_name": "Challenge",
+  "description": "Marcador de puntuación para deportes de raqueta",
+  "author": "Squashner",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0e27",
+  "theme_color": "#0a0e27",
+  "categories": ["sports", "utilities"],
+  "lang": "es",
+  "icons": []
+}

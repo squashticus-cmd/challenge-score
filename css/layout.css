@@ -1,0 +1,89 @@
+/* ============ MOBILE FIRST ============ */
+.app-header {
+  padding: var(--sp-lg) var(--sp-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+
+.app-logo {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@media (min-width: 600px) {
+  .app-logo { max-width: 420px; }
+}
+
+@media (min-width: 1024px) {
+  .app-logo { max-width: 500px; }
+}
+.subtitle { color: var(--text-muted); font-size: var(--fs-sm); margin-top: var(--sp-xs); }
+
+.app-footer {
+  padding: var(--sp-md);
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--border);
+}
+
+.sport-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-md);
+  padding: var(--sp-md);
+  overflow-y: auto;
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--sp-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.scoreboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--sp-md);
+  padding: var(--sp-md);
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-sm);
+  padding: var(--sp-md);
+}
+
+.history-list { flex: 1; overflow-y: auto; padding: var(--sp-md); }
+
+/* ============ TABLET ============ */
+@media (min-width: 600px) {
+  .sport-grid { grid-template-columns: repeat(3, 1fr); padding: var(--sp-lg); gap: var(--sp-lg); }
+  .scoreboard { flex-direction: row; align-items: center; }
+  .controls { gap: var(--sp-md); padding: var(--sp-lg); }
+}
+
+/* ============ DESKTOP / WEB ============ */
+@media (min-width: 1024px) {
+  #app { max-width: 1400px; margin: 0 auto; }
+  .sport-grid { grid-template-columns: repeat(4, 1fr); max-width: 1200px; margin: 0 auto; }
+  .scoreboard { gap: var(--sp-xl); }
+}
+
+/* ============ LANDSCAPE MÓVIL ============ */
+@media (max-height: 500px) and (orientation: landscape) {
+  .scoreboard { flex-direction: row; }
+  .app-header { padding: var(--sp-sm); }
+}
