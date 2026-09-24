@@ -1,22 +1,51 @@
-# Sistema
+# ============ SISTEMA OPERATIVO ============
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# IDE
+# ============ EDITORES / IDEs ============
 .vscode/
 .idea/
-
-# Logs
-*.log
-
-# Backups
-*.bak
+*.swp
+*.swo
 *~
+*.sublime-project
+*.sublime-workspace
 
-# Node (cuando empaquetemos)
+# ============ LOGS ============
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============ BACKUPS ============
+*.bak
+*.backup
+*.old
+
+# ============ NODE (futuro empaquetado) ============
 node_modules/
 package-lock.json
+yarn.lock
 
-# Builds
+# ============ BUILDS (futuro) ============
 dist/
 build/
+*.apk
+*.ipa
+*.aab
+
+# ============ EXCEPCIONES (asegurar que estos SÍ se guarden) ============
+!assets/
+!assets/images/
+!assets/images/*.png
+!css/
+!js/
+!index.html
+!manifest.json
+!sw.js
