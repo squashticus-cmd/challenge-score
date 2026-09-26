@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.squashner.challengescore",
+        "sha256_cert_fingerprints": ["5C:88:58:3C:33:D7:E4:7E:72:74:B3:34:19:7C:98:DA:8C:38:AA:37:F0:74:BC:F7:E9:FB:7C:83:58:13:C2:B0"]
+      }
+    }]
